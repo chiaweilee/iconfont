@@ -1,8 +1,9 @@
 {
   "name": "iconfont-symbol",
-  "version": "0.1.0",
-  "main": "src/IconfontSymbol.js",
+  "version": "0.1.1",
+  "main": "lib/IconfontSymbol.js",
   "files": [
+    "lib/IconfontSymbol.js",
     "src/IconfontSymbol.js"
   ],
   "dependencies": {
@@ -10,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npx babel src/IconfontSymbol.js --out-file lib/IconfontSymbol.js --presets=@babel/preset-env,@babel/preset-react",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dist": "rundist --dirname build"
@@ -25,6 +26,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "eslint-config-ali": "^5.0.1",
     "eslint-config-react": "^1.1.7",
     "react": "^16.8.2",
