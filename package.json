@@ -1,13 +1,13 @@
 {
   "name": "iconfont-symbol",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "lib/IconfontSymbol.js",
   "files": [
     "lib/IconfontSymbol.js",
     "src/IconfontSymbol.js"
   ],
   "dependencies": {
-    "aliba": "^0.1.1"
+    "aliba": "^0.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
