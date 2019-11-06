@@ -1,3 +1,5 @@
+import { ComponentClass } from 'react';
+
 export interface IOption {
   fontClass?: string;
   style?: {
@@ -9,7 +11,20 @@ export interface IOption {
   };
 }
 
+interface IProps {
+  className?: string;
+  style?: object;
+  name: string;
+  onClick: (e?: EventTarget) => void;
+}
+
+declare global {
+  interface Window {
+    __iconfont__svg__cssinject__: any;
+  }
+}
+
 declare module 'iconfont-symbol' {
-  const createIconfontSymbol: (fontId: string, option: IOption) => any;
+  const createIconfontSymbol: (fontId: string, option: IOption) => ComponentClass<IProps>;
   export createIconfontSymbol;
 }

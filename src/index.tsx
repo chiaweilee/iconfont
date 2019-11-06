@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react';
 import { hyphenateCss } from 'aliba';
 import { IOption } from '../index';
@@ -14,7 +15,10 @@ interface IProps {
   name: string;
 }
 
-export function createIconfontSymbol(fontId: string, option = {} as IOption): React.ReactComponentElement {
+export function createIconfontSymbol(
+  fontId: string,
+  option = {} as IOption,
+): React.ReactComponentElement {
   return class IconfontSymbol extends React.PureComponent<IProps> {
     option: IOption;
     props: IProps;
@@ -62,9 +66,10 @@ export function createIconfontSymbol(fontId: string, option = {} as IOption): Re
     }
 
     render() {
+      const { className, name, ...props } = this.props;
       return (
-        <svg className={this.className} style={this.props.style} aria-hidden="true">
-          <use xlinkHref={`#${this.props.name}`} />
+        <svg className={this.className} {...props} aria-hidden="true">
+          <use xlinkHref={`#${name}`} />
         </svg>
       );
     }
