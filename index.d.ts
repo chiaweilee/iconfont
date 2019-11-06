@@ -15,7 +15,7 @@ interface IProps {
   className?: string;
   style?: object;
   name: string;
-  onClick: (e?: EventTarget) => void;
+  onClick?: (e?: EventTarget) => void;
 }
 
 declare global {
